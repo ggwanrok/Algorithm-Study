@@ -65,12 +65,12 @@ void input() {
 void bfs() {
     queue<pair<int, int>> wait[26];  // 열쇠가 없어서 대기하는 문 위치 저장
 
-    // **🔹 테두리에서 시작 가능한 지점 찾기 (BFS 내부와 동일한 방식 적용)**
+    // 테두리에서 시작 가능한 지점 찾기 (BFS 내부와 동일한 방식 적용)
     for (int i = 0; i < c; i++) {
         // 위쪽 테두리
         if (home[0][i] != '*') {
             if (home[0][i] >= 'A' && home[0][i] <= 'Z' && keys.find(tolower(home[0][i])) == keys.end()) {
-                wait[home[0][i] - 'A'].push({0, i});  // **🔹 열쇠 없으면 대기**
+                wait[home[0][i] - 'A'].push({0, i});  // 열쇠 없으면 대기
             } else {
                 q.push({0, i});
             }
@@ -78,7 +78,7 @@ void bfs() {
         // 아래쪽 테두리
         if (home[r - 1][i] != '*') {
             if (home[r - 1][i] >= 'A' && home[r - 1][i] <= 'Z' && keys.find(tolower(home[r - 1][i])) == keys.end()) {
-                wait[home[r - 1][i] - 'A'].push({r - 1, i});  // **🔹 열쇠 없으면 대기**
+                wait[home[r - 1][i] - 'A'].push({r - 1, i});  
             } else {
                 q.push({r - 1, i});
             }
@@ -88,7 +88,7 @@ void bfs() {
         // 왼쪽 테두리
         if (home[i][0] != '*') {
             if (home[i][0] >= 'A' && home[i][0] <= 'Z' && keys.find(tolower(home[i][0])) == keys.end()) {
-                wait[home[i][0] - 'A'].push({i, 0});  // **🔹 열쇠 없으면 대기**
+                wait[home[i][0] - 'A'].push({i, 0});
             } else {
                 q.push({i, 0});
             }
@@ -96,7 +96,7 @@ void bfs() {
         // 오른쪽 테두리
         if (home[i][c - 1] != '*') {
             if (home[i][c - 1] >= 'A' && home[i][c - 1] <= 'Z' && keys.find(tolower(home[i][c - 1])) == keys.end()) {
-                wait[home[i][c - 1] - 'A'].push({i, c - 1});  // **🔹 열쇠 없으면 대기**
+                wait[home[i][c - 1] - 'A'].push({i, c - 1});
             } else {
                 q.push({i, c - 1});
             }
