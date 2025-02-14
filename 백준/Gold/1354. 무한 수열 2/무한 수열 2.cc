@@ -1,44 +1,29 @@
 #include <iostream>
-#include <vector>
-#include <map>
+#define SIZE 100000
 #define ll long long
 using namespace std;
 
+ll dp[SIZE];
 ll n, p, q, x, y;
 
-map<ll, ll> is_in;
-
-void input();
-void func();
-ll get_value(ll);
-
-int main(){
-    ios_base:: sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
-
-    input();
-    func();
-    return 0;
-}
-
-ll get_value(ll idx){
-    if(idx <= 0) return 1;
-    if(is_in.find(idx) != is_in.end()){
-        return is_in[idx];
+ll get_value(ll value){
+    if(value <= 0) return 1;
+    if(value < SIZE && dp[value]){
+        return dp[value];
+    }
+    else if(value < SIZE){
+        return dp[value] = get_value(value/p-x) + get_value(value/q-y);
     }
     else{
-        ll value = get_value(idx/p - x) + get_value(idx/q - y);
-        is_in.insert({idx, value});
-        return is_in[idx];
+        return get_value(value/p-x) + get_value(value/q-y);
     }
 }
 
-void func(){
-    cout<<get_value(n);
-}
-
-void input(){
+int main(){
+    ios_base :: sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
     cin>>n>>p>>q>>x>>y;
-    is_in.clear();
+    cout<<get_value(n)<<'\n';
+    return 0;
 }
