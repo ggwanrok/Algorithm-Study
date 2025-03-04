@@ -27,10 +27,9 @@ int solve(int p, int cur, int coin){
     ret = 0;
     //그대로 갔을 때,
     ret = max(ret, solve(p, cur+1, coin)+((p == tree[cur])? 1 : 0));
-    //바꿨을 때, (그치만 다음 열매가 바뀌었을 떄, 열려야 의미가 있기에, 분기작업해주기)
-    //애초에 현 시점에 열매가 떨어진다면,
-    if(coin > 0 && p != tree[cur]){
-        ret = max(ret, solve((p==1)?2:1, cur, coin-1));
+    //바꿨을 때, 
+    if(coin > 0){
+        ret = max(ret, solve((p==1) ? 2 : 1, cur, coin-1)+((p == tree[cur])? 1 : 0));
     }
     return ret;
 }
