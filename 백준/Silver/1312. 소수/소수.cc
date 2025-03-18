@@ -9,7 +9,7 @@ int main(){
     cin>>a>>b>>n;
 
     while(n--){
-        a %= b;
+        a %=b;
         a *= 10;
     }
     cout<<(a/b)%10<<'\n';
