@@ -10,19 +10,24 @@
 using namespace std;
 
 int main(){
+    ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
     int k, c, m, n;
     int sub;
     int coin;
     cin>>k>>c;
     while(c--){
-        cin>>m>>n;
-        if(m > n) m--;
-        sub = abs(m-n);
-        coin = k - max(m, n);
-        
+        cin>>n>>m;
         if(n==m) cout<<1<<'\n';
-        else if(coin >= sub-1) cout<<1<<'\n';
-        else cout<<0<<'\n';
+        else if(n > m){
+            coin = k - n + 1;
+            if(n-1 <= m + coin) cout<<1<<'\n';
+            else cout<<0<<'\n';
+        }
+        else{
+            coin = k - m;
+            if(m-1 <= n + coin) cout<<1<<'\n';
+            else cout<<0<<'\n';
+        }
     }
     return 0;
 }
