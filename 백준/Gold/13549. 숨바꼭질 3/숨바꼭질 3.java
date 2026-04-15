@@ -1,4 +1,3 @@
-
 import java.util.*;
 
 public class Main {
@@ -36,7 +35,7 @@ public class Main {
             int cur = (int) out.get(0); // 5
             int time = (int) out.get(1); // 0
 
-            if (time > K) break;
+            
 
             arr[cur] = Math.min(arr[cur], time);
 
