@@ -5,10 +5,10 @@ int main(){
     long long  n, p; cin>>n>>p;
     long long  t = 1;
     for(long long  i=1; i<=n; ++i){
+        t = t *i;
         if(t>p){
             t = t%p;
         }
-        t = t *i;
     }
     
     cout<< t%p <<'\n';
