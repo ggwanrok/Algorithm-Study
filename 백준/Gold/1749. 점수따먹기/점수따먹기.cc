@@ -16,22 +16,24 @@ int main() {
             cin >> arr[i][j];
 
     int res = INT_MIN;
-
-    for (int top = 0; top < n; ++top) {
+    //부분합스러운 문제.
+    //정해진 폭에 대해서, 일차원 배열에 저장해서 작업해주기.
+    for(int top = 0; top < n; top++){
         memset(temp, 0, sizeof(temp));
-        for (int bottom = top; bottom < n; ++bottom) {
-            for (int col = 0; col < m; ++col)
-                temp[col] += arr[bottom][col];
-
-            int sum = 0, max_sum = INT_MIN;
-            for (int k = 0; k < m; ++k) {
-                sum = max(temp[k], sum + temp[k]);
-                max_sum = max(max_sum, sum);
+        for(int bot = top; bot < n; bot++){
+            for(int i=0; i<m; i++)
+                temp[i] += arr[bot][i];
+            //temp 배열에 현 시점작업할 두께에 대해서 합산 정보가 저장됨.
+            //이 구조 속에서 누적합의 최대를 고려하면 됨.
+            int sum = 0;
+            int cur_res = INT_MIN;
+            for(int i=0; i<m; i++){
+                sum = max(temp[i], sum+temp[i]);
+                cur_res = max(cur_res, sum);
             }
-            res = max(res, max_sum);
+            res = max(res, cur_res);
         }
     }
-
-    cout << res << '\n';
+    cout<<res<<'\n';
     return 0;
 }
