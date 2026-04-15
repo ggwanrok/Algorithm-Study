@@ -51,14 +51,12 @@ void func(){
     }
 }
 
-bool check_str(vector<char> check_vec) {
-    if (check_vec.size() != tar_len) return false;
-    for (int i = 0; i < check_vec.size(); i++) {
-        if (tar[i] != check_vec[check_vec.size()-1-i]) return false;
+bool check_str(vector<char> check_vec){
+    for(int i=0; i<check_vec.size(); i++){
+        if(tar[i] != check_vec[check_vec.size()-1-i]) return false;
     }
     return true;
 }
-
 
 bool is_valid(char k){
     if(k >= '0' && k <= '9'){
