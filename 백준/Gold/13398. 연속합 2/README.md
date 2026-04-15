@@ -1,4 +1,4 @@
-# [Gold V] 연속합 2 - 13398 
+# [Gold IV] 연속합 2 - 13398 
 
 [문제 링크](https://www.acmicpc.net/problem/13398) 
 
