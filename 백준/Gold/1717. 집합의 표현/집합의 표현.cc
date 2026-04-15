@@ -14,6 +14,11 @@ int find(int a){
  }
 
 void union_set(int a, int b){
+    if(b < a){
+        int tmp = a;
+        a = b;
+        b = tmp;
+    }
     int par_a = find(a);
     int par_b = find(b);
     if(par_a != par_b){
