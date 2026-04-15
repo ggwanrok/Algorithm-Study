@@ -4,7 +4,6 @@ using namespace std;
 
 
 int area[51][51];
-int label[51][51];
 int is_visited[51][51];
 int dx[8] = {0, 0, 1, -1, 1, 1, -1, -1};
 int dy[8] = {1, -1, 0, 0, 1, -1, 1, -1};
@@ -16,14 +15,12 @@ int main(){
     while(1){
         cin>>b>>a;
         num = 0;
-        queue<pair<int, int>> q;
         if(a==0 and b==0) break;
         //reset
         for(int i=0; i<a; i++){
             for(int j=0; j<b; j++){
                 cin>>area[i][j];
                 is_visited[i][j] = 0;
-                label[i][j] = 0;
             }
         }
 
