@@ -1,2 +1,2 @@
-# ALGO_gwan_from_2025_01_13
-This is an auto push repository for Baekjoon Online Judge created with [BaekjoonHub](https://github.com/BaekjoonHub/BaekjoonHub).
+# Algorithm Study
+알고리즘 문제 풀이 및 코드 효율화를 위한 기록 저장소입니다.
