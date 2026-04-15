@@ -8,7 +8,7 @@
 
 ### 분류
 
-다이나믹 프로그래밍, 수학, 런타임 전의 전처리
+수학, 다이나믹 프로그래밍, 런타임 전의 전처리
 
 ### 제출 일자
 
@@ -18,7 +18,7 @@
 
 <p>육각수는 육각형을 이용해 정의할 수 있다. h<sub>n</sub>은 한 변에 점 1, 2, ..., n개가 있는 육각형을 점 하나만 겹치게 그렸을 때 존재하는 서로 다른 점의 개수이다.</p>
 
-<p style="text-align: center;"><img alt="" src="https://upload.acmicpc.net/be790cb3-e1ff-4725-9de8-a265adca71f6/-/preview/" style="width: 320px; height: 109px;"></p>
+<p style="text-align: center;"><img alt="" src="" style="width: 320px; height: 109px;"></p>
 
 <p style="text-align: center;">그림 1</p>
 
