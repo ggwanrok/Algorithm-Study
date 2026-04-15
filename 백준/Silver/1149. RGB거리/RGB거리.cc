@@ -23,6 +23,6 @@ int main(){
             }
         }
     }
-    cout<<min(dp[n-1][0], min(dp[n-1][1], dp[n-1][2]))<<'\n';
+    cout<<min(dp[n-1][0], min(dp[n-1][1], dp[n-1][2]));
     return 0;
 }
