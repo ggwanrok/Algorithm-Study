@@ -4,6 +4,7 @@ using namespace std;
 
 int n, m, k;
 
+vector<pair<int, int>> cs;
 vector<int> ms;
 
 int par[4000001];
@@ -33,7 +34,10 @@ int main(){
         int num; cin>>num;
         auto it = upper_bound(ms.begin(), ms.end(), num);
         int idx = it - ms.begin();
-        idx = find(idx);
+
+        if(idx != par[idx]){
+            idx = find(idx);
+        }
         par[idx] = find(idx+1);
         cout<<ms[idx]<<'\n';
     }
