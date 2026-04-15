@@ -14,7 +14,7 @@ struct Node{
     int left;
     int right;
     bool visited;
-};
+}N;
 
 void cleanNode(Node* array){
     for(int i=1; i<=n; i++){
