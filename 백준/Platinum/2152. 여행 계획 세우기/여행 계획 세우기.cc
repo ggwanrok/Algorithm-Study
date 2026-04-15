@@ -9,29 +9,28 @@ using namespace std;
 int n, m, s, t;
 
 //scc 만들 떄 사용할 녀석들
-vector<int> orig[10002];
-int node_scc[10002];
-vector<vector<int>> scc;
-int discNum;
-int disc[10002];
-int groupCount;
-stack<int> node_stack;
+vector<int> orig[10002]; //최초 경로
+int node_scc[10002]; // 각 지역의 라벨 정보
+vector<vector<int>> scc; // 각 라벨정보마다의 속한 지역정보
+int discNum; // 연결요소 확인에 사용
+int disc[10002]; // 연결요소 확인에 사용
+int groupCount; // 강연결요소 라벨
+stack<int> node_stack; // 연결요소 확인에 사용
 
 //만들어진 scc를 통해서 답을 구할 때 사용할 녀석들
-int res[10002];
+int res[10002]; // 각 강연결요소 번호에 따른, 시작점으로부터 탐색할 수 있는 최댓값
 bool visit[10002];
 
 void input();
 void make_scc();
 int dfs(int);
 void use_scc(int, int);
+void output();
 
 int main(void){
     input();
     make_scc();
-    res[node_scc[s]] = scc[node_scc[s]].size();
-    use_scc(s, node_scc[s]);
-    cout<<res[node_scc[t]]<<'\n';
+    output();
     return 0;
 }
 
@@ -94,4 +93,10 @@ void use_scc(int node, int cur_scc_idx){ // 탐색할 노드와, 해당 노드�
             }
         }
     }
+}
+
+void output(){
+    res[node_scc[s]] = scc[node_scc[s]].size();
+    use_scc(s, node_scc[s]);
+    cout<<res[node_scc[t]]<<'\n';
 }
