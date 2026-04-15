@@ -1,23 +1,21 @@
 #include <iostream>
-
 using namespace std;
-const int MAX_N = 1000;
-bool isErased[MAX_N+1];
+int r;
+bool moon(int a){
+    int t=0;
+    for(int i=1;i<=a;++i){
+        if(a%i == 0) t++;
+    }
+    if(t == 2) r++;
+    return 0;
+}
 int main(){
-    ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-    int N; cin >> N;
-    isErased[0] = true;
-    isErased[1] = true;
-    for(int p=2; p*p <=1000; ++p){
-        if(isErased[p]) continue;
-        for(int j=p*p; j<=1000; j+=p){
-            isErased[j]=true;
-        }
+    ios_base::sync_with_stdio(false); cout.tie(NULL); cin.tie(0);
+    int n; cin>>n;
+    for(int i=0; i<n;++i){
+        int k; cin>>k;
+        moon(k);
     }
-    int cnt = 0;
-    while(N--){
-        int K; cin >> K;
-        if(!isErased[K]) cnt++;
-    }
-    cout<<cnt<<'\n';
+    cout<<r<<'\n';
+    return 0;
 }
