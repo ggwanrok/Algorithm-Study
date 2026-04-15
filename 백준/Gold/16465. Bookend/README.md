@@ -18,13 +18,13 @@
 
 <p>최근 투자 실패로 전세 자금을 날려 먹은 준엽이는 여자친구와 방을 합치기로 했다. 부푼 마음을 가지고 이사를 하던 준엽이는 책장 앞에서 여자친구와 대립 중이다. 바로 깔끔하지 못한 여자친구의 책꽂이 습관 때문이다. 강박증이 심한 준엽이는 책장에 책이 비스듬히 세워지거나 옆으로 넘어지는 것을 원하지 않는다. </p>
 
-<p style="text-align: center;"><img alt="" src="https://upload.acmicpc.net/97c60197-3d5a-498e-8db1-6f5c983ae608/-/preview/" style="width: 400px;">     <img alt="" src="https://upload.acmicpc.net/d3c95ff8-7cf1-4391-8fa8-896ee58eeb65/-/preview/" style="width: 330px;"></p>
+<p style="text-align: center;"><img alt="" src="" style="width: 400px;">     <img alt="" src="" style="width: 330px;"></p>
 
 <p style="text-align: center;"><strong>준엽이가 좋아하지 않는 책장 상태</strong></p>
 
 <p>준엽이는 ㄱ자 모양 북엔드를 몇 개 구매하여, 책들을 넘어지지 않게 고정하고 싶다. 준엽이는 책들의 위치와 배열에 상관없이, 어떤 책도 넘어지지 않고 양면이 지탱되고 있는 상태를 좋아한다. 당연하겠지만, 강박증이 있는 준엽이는 책들의 순서가 바뀌는 것을 좋아하지 않는다. 즉, 준엽이가 가져온 책들의 순서가 그대로 유지되어야 한다.</p>
 
-<p style="text-align: center;"><img alt="" src="https://upload.acmicpc.net/de823e11-f170-44bc-95bd-326d609c3fad/-/preview/" style="width: 300px;">                   <img alt="" src="https://upload.acmicpc.net/d440cb08-d836-43e5-8e80-115087068786/-/preview/" style="height: 278px; width: 500px;"></p>
+<p style="text-align: center;"><img alt="" src="" style="width: 300px;">                   <img alt="" src="" style="height: 278px; width: 500px;"></p>
 
 <p style="text-align: center;"><strong>북엔드 실물                                                                             준엽이가 좋아하는 책장 상태 </strong></p>
 
