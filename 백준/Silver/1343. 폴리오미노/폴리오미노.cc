@@ -10,15 +10,15 @@ int main() {
     for(int i=0; i<s.length(); i++){
         if(s[i] == '.'){
             if(cnt % 4 == 0){
-                int loop = cnt / 4;
-                for(int j=0; j<loop; j++){
+                int kk = cnt / 4;
+                for(int j=0; j<kk; j++){
                     res += "AAAA";
                 }
                 res += ".";
             }
             else if(cnt % 2 == 0){
-                int loop = cnt / 4;
-                for(int j=0; j<loop; j++){
+                int kk = cnt / 4;
+                for(int j=0; j<kk; j++){
                     res += "AAAA";
                 }
                 res += "BB.";
@@ -35,16 +35,21 @@ int main() {
         }
     }
 
+    if(res == "-1"){
+        cout<<res<<'\n';
+        return 0;
+    }
+
     if(cnt != 0){
         if(cnt % 4 == 0){
-            int loop = cnt / 4;
-            for(int j=0; j<loop; j++){
+            int kk = cnt / 4;
+            for(int j=0; j<kk; j++){
                 res += "AAAA";
             }
         }
         else if(cnt % 2 == 0){
-            int loop = cnt / 4;
-            for(int j=0; j<loop; j++){
+            int kk = cnt / 4;
+            for(int j=0; j<kk; j++){
                 res += "AAAA";
             }
             res += "BB";
