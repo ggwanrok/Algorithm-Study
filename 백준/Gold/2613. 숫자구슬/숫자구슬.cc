@@ -10,7 +10,7 @@ int res;
 bool checkM(int mid){
     int mCheck = 1;
     int targetSum = 0;
-
+    //옳바른 targetNum을 구하는 과정.
     for(int i=0; i<n; i++){
         if(targetSum + array[i] > mid){
             targetSum = 0;
@@ -25,6 +25,8 @@ void parametricSearch(){
     while(Left <= Right){
         int mid = (Left + Right)/2;
         if(checkM(mid)){
+            //기존에는 while문에 등호를 뺴고, right = mid로 구성했었지만, check함수가 등호를 포함한 결과를 가져옴.
+            //따라서, 전처럼 진행한다면, 옳바른 값보다 1 작은 값이 도출될 수 있음.
             res = mid;
             Right = mid-1;
         }
@@ -38,7 +40,8 @@ void printGroup(){
     int count = 0;
     int groupSum = 0;
     int yetToM = m;
-    //0부터 인덱스를 꾸려나가고, 초과한다면 넘겨주는 형식을 고려한다.
+    //이미 되는 targetNum을 구한 것.
+    //되는 과정 하나만 보이면 되는 상황이기에, 아래처럼 풀이함.
     for(int i=0; i<=n; i++){
         if(groupSum + array[i] > res || yetToM > n - i){
             cout<<count<<" ";
