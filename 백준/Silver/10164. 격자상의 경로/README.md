@@ -20,7 +20,7 @@
 
 <p>행의 수가 3이고 열의 수가 5인 격자에서 각 칸에 번호가 1부터 차례대로 부여된 예가 아래에 있다. 이 격자에서는 8번 칸에 ○ 표시가 되어 있다.</p>
 
-<p style="text-align: center;"><img alt="" src="https://upload.acmicpc.net/8299a142-dd28-48bc-a698-64b8789e4733/-/preview/" style="width: 258px; height: 125px;"></p>
+<p style="text-align: center;"><img alt="" src="" style="width: 258px; height: 125px;"></p>
 
 <p>격자의 1번 칸에서 출발한 어떤 로봇이 아래의 두 조건을 만족하면서 N×M번 칸으로 가고자 한다. </p>
 
