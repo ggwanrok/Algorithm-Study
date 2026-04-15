@@ -4,7 +4,7 @@
 
 ### 성능 요약
 
-메모리: 2024 KB, 시간: 0 ms
+메모리: 2028 KB, 시간: 0 ms
 
 ### 분류
 
@@ -12,13 +12,13 @@
 
 ### 제출 일자
 
-2026년 2월 13일 21:53:51
+2026년 2월 13일 22:13:46
 
 ### 문제 설명
 
 <p>숭실 대학교 정보 과학관은 유배를 당해서  캠퍼스의 길 건너편에 있다. 그래서 컴퓨터 학부 학생들은 캠퍼스를 ‘본대’ 라고 부르고 정보 과학관을 ‘정보대’ 라고 부른다. 준영이 또한 컴퓨터 학부 소속 학생이라서 정보 과학관에 박혀있으며 항상 꽃 이 활짝 핀 본 대를 선망한다. 어느 날 준영이는 본 대를 산책하기로 결심하였다. 숭실 대학교 캠퍼스 지도는 아래와 같다.</p>
 
-<p style="text-align: center;"><img alt="" src="https://onlinejudgeimages.s3-ap-northeast-1.amazonaws.com/problem/12850/1.png" style="height:644px; width:940px"></p>
+<p style="text-align: center;"><img alt="" src="" style="height:644px; width:940px"></p>
 
 <p style="text-align: center;">(편의 상 문제에서는 위 건물만 등장한다고 가정하자)</p>
 

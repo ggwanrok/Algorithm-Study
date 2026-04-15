@@ -11,6 +11,30 @@ vector<vector<ll>> soongsil;
 vector<vector<ll>> multiply(vector<vector<ll>>& A, vector<vector<ll>>& B);
 ll power(vector<vector<ll>> A, int n);
 
+void multiply_in_place(vector<vector<ll>>& target, const vector<vector<ll>>& source) {
+    vector<vector<ll>> tmp(8, vector<ll>(8, 0));
+    for (int i = 0; i < 8; i++) {
+        for (int j = 0; j < 8; j++) {
+            for (int k = 0; k < 8; k++) {
+                tmp[i][j] = (tmp[i][j] + target[i][k] * source[k][j]) % MOD;
+            }
+        }
+    }
+    target = tmp; 
+}
+
+void power_in_place(vector<vector<ll>>& A, int n) {
+    vector<vector<ll>> res(8, vector<ll>(8, 0));
+    for (int i = 0; i < 8; i++) res[i][i] = 1;
+
+    while (n > 0) {
+        if (n % 2 == 1) multiply_in_place(res, A);
+        multiply_in_place(A, A);
+        n /= 2;
+    }
+    A = res; 
+}
+
 int main(){
 
     int d; cin>>d;
@@ -29,10 +53,14 @@ int main(){
     soongsil[6][5] = soongsil[6][7] = 1;
     soongsil[7][4] = soongsil[7][6] = 1;
 
-    cout<<power(soongsil, d)<<'\n';
+    power_in_place(soongsil, d);
+
+    cout<<soongsil[0][0]<<'\n';
 
     return 0;
 }
+
+
 
 
 vector<vector<ll>> multiply(vector<vector<ll>>& A, vector<vector<ll>>& B) {
