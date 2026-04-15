@@ -1,39 +1,40 @@
-#include <bits/stdc++.h>
-
+#include <iostream>
 using namespace std;
+int n, r, c;
+int ans;
 
-/*
-전체 구조가 정사각형 구조를 가진다.
-행열 정보를 통해서 행 열정보가 필요하다.
-n-1 구조로 잡고 해서
-*/
+void z(int y, int x, int size)
+{
+    if (y == r && x == c)
+    {
+        cout << ans << '\n';
+        return;
+    }
 
-int getting(int n, int i, int j){
-    if(n == 2){
-        return i*2 + j;
+    // r,c가 현재 사분면에 존재한다면
+    if (r < y + size && r >= y && c < x + size && c >= x)
+    {
+        // 1사분면 탐색
+        z(y, x, size / 2);
+        // 2사분면 탐색
+        z(y, x + size / 2, size / 2);
+        // 3사분면 탐색
+        z(y + size / 2, x, size / 2);
+        // 4사분면 탐색
+        z(y + size / 2, x + size / 2, size / 2);
     }
-    int sum_value = 0;
-    int devide_value = n/2;
-    if(i >= devide_value){
-        sum_value += devide_value * devide_value * 2;
+    else
+    {
+        ans += size * size;
     }
-    if(j >= devide_value){
-        sum_value += devide_value * devide_value;
-    }
-    int nxt_i = i/devide_value;
-    int nxt_j = j/devide_value;
-    return sum_value + getting(n/2, i%devide_value, j%devide_value);
 }
-
 int main(){
-    int n, r, c;
+    ios_base::sync_with_stdio(false); cout.tie(NULL); cin.tie(0);
     cin>>n>>r>>c;
-    int line_cnt = pow(2, n);
-
-    //재귀로 타고 들어가야 할 것 같은데.
-    /*
-    현재 고려하는 위치에 대해서 cnt가 2가 되기 전까지 타고 내려가서
-    */
-    cout<<getting(line_cnt, r, c)<<'\n';
+    int t = 1;
+    while(n--){// 그림 한 변의 길이를 완성했다.
+        t *= 2;
+    }
+    z(0, 0, t);
     return 0;
-}
+} 
