@@ -1,4 +1,4 @@
-# [Silver IV] 색종이 - 2 - 2567 
+# [Silver III] 색종이 - 2 - 2567 
 
 [문제 링크](https://www.acmicpc.net/problem/2567) 
 
@@ -20,7 +20,7 @@
 
 <p>예를 들어 흰색 도화지 위에 네 장의 검은색 색종이를 <그림 1>과 같은 모양으로 붙였다면 검은색 영역의 둘레는 96 이 된다.</p>
 
-<p style="text-align: center;"><img alt="" src="https://upload.acmicpc.net/c69406f3-4cc4-48a8-a04f-11e7e4f33ab3/-/preview/" style="width: 326px; height: 330px;"></p>
+<p style="text-align: center;"><img alt="" src="" style="width: 326px; height: 330px;"></p>
 
 <p style="text-align: center;"><그림 1></p>
 
