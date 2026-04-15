@@ -12,5 +12,5 @@ int main(){
         a %=b;
         a *= 10;
     }
-    cout<<(a/b)<<'\n';
+    cout<<(a/b)%10<<'\n';
 }
