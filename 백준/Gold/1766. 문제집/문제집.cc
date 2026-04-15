@@ -6,6 +6,7 @@ using namespace std;
 위상정렬 문제.
 라고 생각했지만,
 같은 진척도라면 수가 더 낮은 문제를 풀이해야하는 조건이 있음.
+ㄴ> 우선순위 큐를 사용하여 해결
 */
 
 int n, m;
@@ -56,4 +57,4 @@ void input(){
         tree[a].push_back(b);
         pre_cnt[b]++;
     }
-}
+}    
