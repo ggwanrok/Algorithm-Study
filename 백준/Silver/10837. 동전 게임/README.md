@@ -1,4 +1,4 @@
-# [Silver III] 동전 게임 - 10837 
+# [Silver II] 동전 게임 - 10837 
 
 [문제 링크](https://www.acmicpc.net/problem/10837) 
 
