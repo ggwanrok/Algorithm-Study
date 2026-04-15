@@ -18,7 +18,7 @@
 
 <p>정수 <var>A, B</var> 가 주어진다. 세로 길이가 <var>A</var> cm, 가로 길이가 <var>B</var> cm 인 아래와 같은 직사각형의 넓이를 cm<sup>2</sup> 단위로 구하시오.</p>
 
-<p style="text-align: center;"><img alt="" src=""></p>
+<p style="text-align: center;"><img alt="" src="https://upload.acmicpc.net/4709c305-92ed-40a0-ab2e-3ade81daed95/-/preview/"></p>
 
 ### 입력 
 
