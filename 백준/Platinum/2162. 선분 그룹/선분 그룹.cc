@@ -87,7 +87,7 @@ ll find(ll t){
 
 void grouping(){
     for(int i=0; i<n; i++){
-    //전반적으로 for문을 2중으로 돌려주면서, 만약, 겹치는게 있다? 그럼 바깥의 그룹으로 합쳐주자.
+        //전반적으로 for문을 2중으로 돌려주면서, 만약, 겹치는게 있다? 그럼 바깥의 그룹으로 합쳐주자.
         for(int j=0; j<n; j++){
             ll root_a = find(i);
             ll root_b = find(j);
