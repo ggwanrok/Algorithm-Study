@@ -7,7 +7,7 @@ int main(void) {
     string str;
     cin >> str;
     for(auto c : str){
-        cout<<c<<'\n';
+        cout<<c<<endl;
     }
     return 0;
 }
